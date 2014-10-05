@@ -19,6 +19,27 @@ class AprintTest extends \PHPUnit_Framework_TestCase {
 
 
 	/**
+	* @covers \Aprint::fgColor
+	* @expectedException Exception
+	**/
+
+	public function testExceptionIsRaisedForUndefinedColor() {
+		Aprint::fgColor('gold', null);
+	}
+
+
+	/**
+	* @covers \Aprint::fgColor
+	* 
+	**/
+
+	public function testAsciiColorAdding() {
+		$this->assertEquals('[0;32mtest[0m',   Aprint::fgColor('green', 'test'));
+	}
+
+
+
+	/**
 	* @covers \Aprint::__construct
 	* @expectedException InvalidArgumentException
 	**/
@@ -26,6 +47,7 @@ class AprintTest extends \PHPUnit_Framework_TestCase {
 	public function testExceptionIsRaisedForInvalidConstructorArgument() {
 		new \Aprint(null);
 	}
+
 
  	/**
      * @covers \Aprint::__construct
