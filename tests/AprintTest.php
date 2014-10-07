@@ -184,10 +184,8 @@ class AprintTest extends \PHPUnit_Framework_TestCase {
 +-----------+-----------+-----------+-----------+
 |Name       |Color      |Element    |Likes      |
 +-----------+-----------+-----------+-----------+[0;32m
-|Trixie     |Green      |Earth      |Flowers    |[0m
-+-----------+-----------+-----------+-----------+[0;34m
-|Tinkerbell |Blue       |Air        |Singning   |[0m
-+-----------+-----------+-----------+-----------+[0;35m
+|Trixie     |Green      |Earth      |Flowers    |[0m[0;34m
+|Tinkerbell |Blue       |Air        |Singning   |[0m[0;35m
 |Blum       |Pink       |Water      |Dancing    |[0m
 +-----------+-----------+-----------+-----------+', $ap->ascii());
 	}

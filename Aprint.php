@@ -33,9 +33,9 @@ class Aprint {
 	public function ascii() {
 		$str = $this->buildHeader();
 		foreach ($this->array as $row) {
-			$str .= $this->buildRow( $this->arrangeRow( $row ) ) . $this->buildLine();
+			$str .= $this->buildRow( $this->arrangeRow( $row ) ) ;
 		}
-		return $str;
+		return $str . $this->buildLine();
 	}
 
 	protected function arrangeRow($row) {
